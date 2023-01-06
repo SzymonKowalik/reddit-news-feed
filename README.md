@@ -8,7 +8,7 @@ This is a Python application that allows you to view the top 5 posts of any subr
 1.  Clone the repository and install the required packages:
 
     ```
-    git clone https://github.com/szymon-kowalik/reddit-top-posts
+    git clone https://github.com/SzymonKowalik/reddit-news-feed
     cd reddit-top-posts
     pip install -r requirements.txt
     ```
