@@ -10,8 +10,7 @@ class App(ctk.CTk):
     def __init__(self, subreddits, posts):
         """Args:
         - subreddits: a list of subreddit names
-        - posts: a dictionary mapping subreddit names to lists of (url, title) tuples
-        """
+        - posts: a dictionary mapping subreddit names to lists of (url, title) tuples"""
         super().__init__()
         self.posts = posts
         self.geometry('1000x380')
@@ -25,6 +24,9 @@ class App(ctk.CTk):
         self.option_menu.grid(row=1, column=0, padx=10, pady=10, sticky='n')
         # Create the right panel for displaying posts
         self.right_panel = RightPanel(self)
+        # Displays first subreddit posts
+        first_subreddit = next(iter(posts))
+        self.list_posts(first_subreddit)
 
     def list_posts(self, choice):
         """Populate the right panel with buttons for the chosen subreddit."""
